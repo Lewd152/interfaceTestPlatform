@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+{% load static %}
+<html lang="en">
+<head>
+    <title>Gadget Sign Up Form a Flat Responsive Widget Template :: w3layouts </title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="Gadget Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "group/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "group/css/style.css" %}">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js"></script>
+</head>
+<body>
+<h1 class="error">Interface Test Platform</h1>
+<!---728x90--->
+<div class="w3layouts-two-grids">
+    <!---728x90--->
+    <div class="mid-class">
+        <div class="img-right-side">
+            <img src="{% static "group/images/b11.png" %}" class="img-fluid" alt="">
+        </div>
+        <div class="txt-left-side">
+            <h2> Login Here </h2>
+            <div class="form-left-to-w3l">
+                <span class="fa fa-user-o" aria-hidden="true"></span>
+                <input type="text" class="username" placeholder=" Name" required="" id="username">
+                <div class="clear"></div>
+            </div>
+            <div class="form-left-to-w3l ">
+                <span class="fa fa-lock" aria-hidden="true"></span>
+                <input type="password" class="password" placeholder="Password" required="" id="password">
+                <div class="clear"></div>
+            </div>
+            <div class="main-two-w3ls">
+                <div class="left-side-forget">
+                    <input type="checkbox" class="checked">
+                    <span class="remenber-me">Remember me </span>
+                </div>
+                <div class="right-side-forget">
+                    <a href="#" class="for">Forgot password...?</a>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-round" onclick="submit()">Login</button>
+
+            <div class="w3layouts_more-buttn">
+                <h3>Have an account..?
+                    <a href="#">Login Here
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function submit() {
+        const username = $('#username').val();
+        const password = $('#password').val();
+        const data = {
+            username: username,
+            password: password,
+        };
+        if (username === "" || password === "") {
+            layer.msg("用户名或密码为空", {
+                icon: 5,
+                time: 1000,
+                anim: 1,
+                offset: '50px'
+            });
+        } else {
+            $.ajax({
+                url: "login/",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (res) {
+                    if (res.code === 0) {
+                        layer.msg(res.massage, {
+                            icon: 5,
+                            time: 1000,
+                            anim: 1,
+                            offset: '50px'
+                        });
+                        return;
+                    }
+                    if (res.code === 200) {
+                        layer.msg(res.massage, {
+                            icon: 5,
+                            time: 1000,
+                            anim: 1,
+                            offset: '50px'
+                        });
+                        window.location.href = '/index/'
+                    }
+                }
+            });
+        }
+
+    }
+</script>
+</body>
+</html>

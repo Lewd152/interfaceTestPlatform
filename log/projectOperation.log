@@ -1,0 +1,213 @@
+2020-10-09 02:43:50,351 - INFO - 1删除了1
+2020-10-09 02:43:59,938 - INFO - 1删除了1
+2020-10-09 02:44:46,879 - DEBUG - Using selector: KqueueSelector
+2020-10-09 02:45:28,458 - INFO - 1删除了1
+2020-10-09 02:45:42,319 - INFO - /Users/kori/Documents/interface_auto/project/moduleViews.py changed, reloading.
+2020-10-09 02:45:42,320 - DEBUG - Using selector: KqueueSelector
+2020-10-09 02:45:51,234 - INFO - 1删除了1
+2020-10-09 02:46:01,245 - INFO - /Users/kori/Documents/interface_auto/project/moduleViews.py changed, reloading.
+2020-10-09 02:46:01,245 - DEBUG - Using selector: KqueueSelector
+2020-10-09 02:46:21,055 - INFO - 1删除了1
+2020-10-09 02:46:40,702 - INFO - /Users/kori/Documents/interface_auto/project/moduleViews.py changed, reloading.
+2020-10-09 02:46:40,703 - DEBUG - Using selector: KqueueSelector
+2020-10-09 02:46:49,578 - INFO - 1删除了1
+2020-10-09 02:47:02,810 - INFO - /Users/kori/Documents/interface_auto/project/moduleViews.py changed, reloading.
+2020-10-09 02:47:02,811 - DEBUG - Using selector: KqueueSelector
+2020-10-09 02:47:45,537 - INFO - 1删除了1
+2020-10-10 01:56:24,296 - WARNING - Not Found: /
+2020-10-10 01:56:28,427 - DEBUG - Using selector: KqueueSelector
+2020-10-14 07:40:28,878 - INFO - root创建了一个项目：21，项目描述：22项目状态：open
+2020-10-14 07:40:49,776 - ERROR - Internal Server Error: /createProject/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1366, "Incorrect string value: '\\xE6\\x96\\x97\\xE5\\x9C\\xB0...' for column 'p_name' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kori/Documents/interface_auto/project/projectViews.py", line 14, in warpper
+    return func(request, *args, **kwargs)
+  File "/Users/kori/Documents/interface_auto/project/projectViews.py", line 40, in createProject
+    project1.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/base.py", line 745, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/base.py", line 782, in save_base
+    updated = self._save_table(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/base.py", line 887, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/base.py", line 924, in _do_insert
+    return manager._insert(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/query.py", line 1204, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1392, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1366, "Incorrect string value: '\\xE6\\x96\\x97\\xE5\\x9C\\xB0...' for column 'p_name' at row 1")
+2020-10-14 07:41:49,587 - INFO - /Users/kori/Documents/interface_auto/project/projectViews.py changed, reloading.
+2020-10-14 07:41:49,587 - DEBUG - Using selector: KqueueSelector
+2020-10-30 02:26:28,313 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 02:26:37,998 - INFO - root创建了一个项目：212，项目描述：222项目状态：open
+2020-10-30 02:44:58,387 - INFO - /Users/kori/Documents/interface_auto/InterFase/urls.py changed, reloading.
+2020-10-30 02:44:58,388 - DEBUG - Using selector: KqueueSelector
+2020-10-30 02:51:45,503 - INFO - root删除了2
+2020-10-30 03:01:04,375 - INFO - /Users/kori/Documents/interface_auto/project/projectViews.py changed, reloading.
+2020-10-30 03:01:04,376 - DEBUG - Using selector: KqueueSelector
+2020-10-30 03:01:58,970 - INFO - root删除了1
+2020-10-30 03:02:04,630 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 03:05:20,718 - ERROR - Internal Server Error: /updateProject/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kori/Documents/interface_auto/project/projectViews.py", line 137, in updateProject
+    project.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2020-10-30 03:06:21,673 - INFO - /Users/kori/Documents/interface_auto/project/projectViews.py changed, reloading.
+2020-10-30 03:06:21,674 - DEBUG - Using selector: KqueueSelector
+2020-10-30 03:11:27,760 - INFO - root删除了3
+2020-10-30 03:15:39,821 - INFO - /Users/kori/Documents/interface_auto/project/projectViews.py changed, reloading.
+2020-10-30 03:15:39,823 - DEBUG - Using selector: KqueueSelector
+2020-10-30 03:22:33,944 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 03:24:24,630 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/projectViews.py changed, reloading.
+2020-10-30 03:24:24,630 - DEBUG - Using selector: KqueueSelector
+2020-10-30 05:06:53,405 - INFO - root创建了一个项目：21，项目描述：2121项目状态：open
+2020-10-30 05:09:59,008 - INFO - root创建了一个项目：养猪，项目描述：养猪项目状态：close
+2020-10-30 05:16:06,318 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/moduleViews.py changed, reloading.
+2020-10-30 05:16:06,320 - DEBUG - Using selector: KqueueSelector
+2020-10-30 05:24:00,778 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 05:24:32,957 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/moduleViews.py changed, reloading.
+2020-10-30 05:24:32,958 - DEBUG - Using selector: KqueueSelector
+2020-10-30 05:29:13,689 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 05:29:29,044 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/moduleViews.py changed, reloading.
+2020-10-30 05:29:29,045 - DEBUG - Using selector: KqueueSelector
+2020-10-30 05:41:17,401 - INFO - root删除了1
+2020-10-30 05:43:56,614 - INFO - root删除了2
+2020-10-30 05:46:19,193 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/moduleViews.py changed, reloading.
+2020-10-30 05:46:19,196 - DEBUG - Using selector: KqueueSelector
+2020-10-30 05:50:04,024 - INFO - root删除了1
+2020-10-30 06:45:20,003 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/models.py changed, reloading.
+2020-10-30 06:45:20,005 - DEBUG - Using selector: KqueueSelector
+2020-10-30 06:50:55,402 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 06:51:09,847 - INFO - root删除了1
+2020-10-30 06:51:25,990 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 10:17:35,320 - WARNING - Not Found: /favicon.ico
+2020-10-30 10:19:05,673 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/InterFase/urls.py changed, reloading.
+2020-10-30 10:19:05,674 - DEBUG - Using selector: KqueueSelector
+2020-10-30 10:25:16,299 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 10:27:01,080 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/InterFase/urls.py changed, reloading.
+2020-10-30 10:27:01,080 - DEBUG - Using selector: KqueueSelector
+2020-10-30 10:41:04,404 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 10:44:27,820 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-30 10:44:27,821 - DEBUG - Using selector: KqueueSelector
+2020-10-30 10:45:27,830 - INFO - root删除了1
+2020-10-30 10:46:42,370 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-30 10:46:42,370 - DEBUG - Using selector: KqueueSelector
+2020-10-30 11:19:31,893 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 11:19:55,806 - INFO - root创建了一个项目：养猪，项目描述：养猪描述项目状态：open
+2020-10-30 11:21:06,424 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/models.py changed, reloading.
+2020-10-30 11:21:06,424 - DEBUG - Using selector: KqueueSelector
+2020-10-30 11:22:33,135 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-30 11:22:42,338 - INFO - root创建了一个项目：养猪，项目描述：养猪项目状态：open
+2020-10-30 11:26:24,456 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-30 11:26:24,456 - DEBUG - Using selector: KqueueSelector
+2020-10-30 11:49:02,031 - INFO - root删除了4
+2020-10-30 13:53:51,048 - WARNING - Not Found: /task/
+2020-10-30 13:54:41,010 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-30 13:54:41,010 - DEBUG - Using selector: KqueueSelector
+2020-10-31 07:52:46,546 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-31 07:52:53,511 - INFO - root创建了一个项目：养猪，项目描述：一款游戏项目状态：open
+2020-10-31 07:57:37,577 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-31 07:57:37,579 - DEBUG - Using selector: KqueueSelector
+2020-10-31 08:00:04,984 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-31 08:00:11,380 - INFO - root创建了一个项目：养猪，项目描述：养猪项目状态：open
+2020-10-31 08:03:16,711 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-10-31 08:03:16,711 - DEBUG - Using selector: KqueueSelector
+2020-10-31 08:21:57,124 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-10-31 08:23:13,973 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/models.py changed, reloading.
+2020-10-31 08:23:13,973 - DEBUG - Using selector: KqueueSelector
+2020-11-02 05:53:47,670 - INFO - root删除了1
+2020-11-02 05:53:49,590 - INFO - root删除了1
+2020-11-02 05:53:54,131 - WARNING - Not Found: /interface/
+2020-11-02 05:53:59,381 - WARNING - Not Found: /interface/
+2020-11-02 05:54:09,429 - WARNING - Not Found: /interface/
+2020-11-02 05:54:30,443 - WARNING - Not Found: /favicon.ico
+2020-11-02 05:54:33,146 - WARNING - Not Found: /interface/
+2020-11-02 05:55:14,242 - INFO - root创建了一个项目：bdd，项目描述：步多多项目状态：open
+2020-11-02 05:57:57,245 - WARNING - Not Found: /interface/
+2020-11-02 05:59:08,220 - WARNING - Not Found: /interface/
+2020-11-02 06:04:24,708 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/InterFase/urls.py changed, reloading.
+2020-11-02 06:04:24,710 - DEBUG - Using selector: KqueueSelector
+2020-11-02 06:40:06,317 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-11-02 06:40:21,080 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-11-02 06:40:34,858 - INFO - root创建了一个项目：斗地主，项目描述：2121项目状态：open
+2020-11-02 07:23:43,475 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-11-02 07:23:43,476 - DEBUG - Using selector: KqueueSelector
+2020-11-02 07:29:24,276 - INFO - root创建了一个项目：斗地主，项目描述：一款游戏项目状态：open
+2020-11-02 07:30:18,011 - WARNING - Not Found: /interface/
+2020-11-02 07:48:14,127 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8001
+2020-11-02 07:48:14,133 - DEBUG - http://127.0.0.1:8001 "GET /moduleAll/ HTTP/1.1" 200 50
+2020-11-02 07:49:09,971 - INFO - /Users/kori/Desktop/github/Interface_Test_Platform/project/caseViews.py changed, reloading.
+2020-11-02 07:49:09,974 - DEBUG - Using selector: KqueueSelector
+2020-11-02 11:35:29,585 - INFO - root删除了6
+2020-11-02 11:35:30,102 - INFO - root删除了5
+2020-11-02 11:35:30,437 - INFO - root删除了4
+2020-11-02 11:35:31,711 - INFO - root删除了3
